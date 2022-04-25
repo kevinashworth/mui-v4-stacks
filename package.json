@@ -1,0 +1,64 @@
+{
+  "name": "mui-v4-stacks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "4.12.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "release": "release-it"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@j-ulrich/release-it-regex-bumper": "1.2.1",
+    "release-it": "14.14.2"
+  },
+  "release-it": {
+    "github": {
+      "release": true,
+      "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@j-ulrich/release-it-regex-bumper": {
+        "out": [
+          {
+            "file": "settings-*.json"
+          },
+          {
+            "file": "package.js"
+          },
+          {
+            "file": "src/App.js"
+          }
+        ]
+      }
+    }
+  }
+}
